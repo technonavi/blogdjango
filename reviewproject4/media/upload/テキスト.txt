@@ -1,0 +1,1 @@
+https://www.useful-python.com/django-category-choice/

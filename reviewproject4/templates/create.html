@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<form action ='' method='POST'enctype='multipart/form-data'>{% csrf_token %}
+{{form.as_p}}
+<input type ='hidden' name='author' value='{{user.id}}'>
+<input type ='submit'  value='作成する'>
+</form>
+{% else %}
+ログインしてください
+{% endif %}
+{% endblock content %}

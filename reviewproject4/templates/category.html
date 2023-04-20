@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock header %}
+{% block content %}
+{% if user.is_authenticated %}
+{% for item in category %}
+<div class ="card">
+<a href="http://127.0.0.1:8000/category/{{item.pk}}" target="_blank">カテゴリー名:{{item.name}}</a>
+
+<div class ="card-body">
+</div>
+</div>
+{% endfor %}
+{% else %}
+ログインしてください
+{% endif %}
+{% endblock content %}

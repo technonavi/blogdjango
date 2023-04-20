@@ -1,0 +1,11 @@
+{% for uploadfile in uploadfile_list %}
+        <a href="{% url 'app:download' uploadfile.pk %}">{{ uploadfile }}</a>
+        <div class ='container'>
+            <div class ="card-body">
+            <h5 class="card-header">{{object.title}}</h5>
+            <h5 class="card-header">{{object.uploadplace}}</h5>
+            <div class ="card-body">
+            </div>
+            </div>
+        <hr>
+    {% endfor %}

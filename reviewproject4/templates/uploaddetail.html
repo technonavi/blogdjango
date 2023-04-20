@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+{% block header %}
+{% endblock header %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class ='container'>
+<div class ="card-body">
+<h5 class="card-header">{{object.title}}</h5>
+<h5 class="card-header">{{object.uploadplace}}</h5>
+<button type=“button” onclick="location.href='http://127.0.0.1:8000/download/{{object.pk}}'">ダウンロード</button>
+</div>
+
+</div>
+{% else %}
+ログインしてください
+{% endif %}
+{% endblock content %}

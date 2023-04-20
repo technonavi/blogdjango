@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+{% block header %}
+{% endblock header %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class ='container'>
+{% for item in  form_upload_list %}
+<div class ="card-body">
+ <h5 class="card-header">{{item.title}}</h5>
+<button type=“button” onclick="location.href='http://127.0.0.1:8000/uploaddetail/{{item.pk}}'">詳細</button>
+</div>
+</div>
+{% endfor %}
+{% else %}
+ログインしてください
+{% endif %}
+{{object.title}}
+</div>
+
+{% endblock content %}

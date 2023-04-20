@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock header %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class ='container'>
+{% for item in object_list %}
+<div class ="card">
+<h5 class="card-header">{{item.title}}</h5>
+<div class ="card-body">
+    <h5 class ="card-title">投稿者:{{item.author}}</h5>
+    <h5 class ="card-title">投稿者:{{item.category}}</h5>
+    <h5 class ="card-title">レビューが参考になった人:{{item.useful_review}}</h5>
+<button type=“button” onclick="location.href='http://127.0.0.1:8000/detail/{{item.pk}}'">詳細</button>
+<button type=“button” onclick="location.href='http://127.0.0.1:8000/delete/{{item.pk}}'">削除</button>
+
+</button>
+</div>
+</div>
+{% endfor %}
+{% else %}
+ログインしてください
+{% endif %}
+{{object.title}}
+</div>
+
+{% endblock content %}
