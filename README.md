@@ -1,2 +1,14 @@
 # blogdjango
-djangoアプリ（ブログサイト）
+ブログサイト作成の練習
+djangoのブログサイトの練習サイト用です
+URL
+localhost8080:トップのページ
+localhost8080/admin:会員登録(カテゴリー名やユーザー名を登録するのに使用)
+localhost8080/signup:ブログサイトのユーザー名の登録とパスワードの登録を行う（これをしないとブログを使う事が出来
+localhost8080/login:ブログサイトのユーザー名とパスワードを入力
+localhost8080/list:ブログサイトのリスト
+localhost8080/detail:リストの詳細
+localhost8080/delete:リストの項目の削除
+localhost8080/create:リストの作成
+localhost8080/category:カテゴリーのタグに含まれているのを一斉に検索
+
